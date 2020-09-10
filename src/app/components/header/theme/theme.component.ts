@@ -10,6 +10,7 @@ import { filter, map } from 'rxjs/operators';
 export class ThemeComponent implements OnInit {
 
 
+  
   constructor(
     public nbThemeService: NbThemeService
   ) { }

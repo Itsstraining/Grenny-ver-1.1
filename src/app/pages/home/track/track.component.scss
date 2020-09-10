@@ -13,16 +13,29 @@ nb-card-body {
     margin-right: 10px;
 
     &:hover {
-      color: #3366ff;
+      color: #0F9D58;
     }
   }
+  .trash{
+    color: #0F9D58;
+  }
 
+  .play-song{
+    color: #0F9D58;
+  }
+  .three-shit{
+     color: #0F9D58;
+  }
+
+  .add-to-liked-song{
+    color: #0F9D58;
+  }
   .add-to-liked-song:hover {
-    color: red;
+    color: #0F9D58;
   }
 
   .remove-of-liked-song {
-    color: red;
+    color: #0F9D58;
 
     &:hover {
       color: red;

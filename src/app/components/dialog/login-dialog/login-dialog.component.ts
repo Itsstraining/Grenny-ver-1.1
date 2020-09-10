@@ -25,18 +25,18 @@ export class LoginDialogComponent implements OnInit {
   showToast(status: NbComponentStatus, position) {
     this.toastrService.show(status, "Login successfully", {
       status,
-      duration: 1000,
+      duration: 1500,
       position
     });
   }
 
   async loginWithGoogle() {
     const provider = new auth.GoogleAuthProvider();
-    const credetial = await this.afAuth.auth.signInWithPopup(provider);
+    const credetial = await this.afAuth.signInWithPopup(provider);
     return this.authService
       .updateUserData(credetial.user)
       .then(() => {
-        this.showToast("success", "bottom-end");
+        this.showToast("success", "top-right");
         this.dialogRef.close();
       })
       .catch(err => console.log(err));

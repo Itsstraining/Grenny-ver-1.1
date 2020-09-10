@@ -8,7 +8,7 @@
 
       <button *ngIf="!isInLikedSong(file)" nbTooltip="Play" nbTooltipPlacement="top"
       nbTooltipStatus="primary" (click)="openFile(file, cloudService.index)">
-      <nb-icon icon="play-circle-outline" status="control"></nb-icon>
+      <nb-icon icon="play-circle-outline" class="play-song"></nb-icon>
       </button>
 
       <button *ngIf="!isInLikedSong(file)" nbTooltip="Add to liked song" nbTooltipPlacement="top"
@@ -22,10 +22,10 @@
       </button>
 
       <button *ngIf="!isInPlaylist" [nbContextMenu]="items" nbContextMenuTrigger="click" [nbContextMenuTag]="tag">
-        <nb-icon icon="more-horizontal-outline"></nb-icon>
+        <nb-icon icon="more-horizontal-outline" class="three-shit"></nb-icon>
       </button>
       <button *ngIf="isInPlaylist" (click)="removeFromPlaylist()">
-        <nb-icon icon="trash-outline">
+        <nb-icon icon="trash-outline" class="trash">
         </nb-icon>
       </button>
     </div>
