@@ -1,0 +1,12 @@
+<nb-card size="tiny" class="home">
+  <nb-card-body>
+    <h5>Music Lists</h5>
+    <p>{{files.length}} Postions</p>
+    <nb-list listenWindowScroll="true" class="list-items">
+      <nb-list-item class="tracks" *ngFor="let file of files">
+        <app-track [file]="file" [tag]="file.id" [isInPlaylist]="false"></app-track>
+      </nb-list-item>
+    </nb-list>
+
+  </nb-card-body>
+</nb-card>

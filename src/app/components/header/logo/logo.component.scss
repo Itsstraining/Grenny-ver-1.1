@@ -1,0 +1,16 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    img {
+        width: 90px;
+        height: 100px;
+        cursor: pointer;
+        outline: none;
+    }
+    .logo {
+        padding: 0px;
+        margin: 0 auto;
+    }
+}

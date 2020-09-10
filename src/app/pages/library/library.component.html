@@ -1,0 +1,16 @@
+<nb-card  class="library">
+  <nb-card-body>
+
+    <nb-tabset>
+      <nb-tab tabTitle="Playlist" tabIcon="headphones-outline" responsive lazyLoad>
+        <app-playlist-detail style="display:flex">
+          <button *ngIf="isInFolderUser" (click)="removeFromFolder()">
+            <nb-icon icon="trash-outline">
+            </nb-icon>
+          </button>
+        </app-playlist-detail>
+      </nb-tab>
+    </nb-tabset>
+
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,14 @@
+nb-icon {
+    cursor: pointer;
+}
+
+button {
+    margin-left: -80%;
+}
+
+@media screen and (max-width: 200px) {
+    .sidebar {
+        width: 20%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}

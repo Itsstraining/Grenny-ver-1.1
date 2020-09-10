@@ -1,0 +1,33 @@
+<div *ngIf="authService.user$ | async; then authenticated else guest">
+</div>
+<ng-template #guest>
+  <nb-card status="basic">
+    <nb-card-header>
+      Welcome to Grenny
+    </nb-card-header>
+    <nb-card-footer>
+      <button nbButton  status="basic" (click)="loginWithGoogle()" style="margin-top: 5vh;">
+        <img src="../../../../assets/images/googleIcon.svg" alt="" width="25px" height="25px" style="margin-right: 10px;">
+        Login with <br> <span style="color:#4285F4 ;">G</span> <span style="color: #DB4437;">o</span> <span style="color: #F4B400;">o</span> <span style="color: #4285F4;">g</span> <span style="color: #0F9D58;">l</span> <span style="color: #DB4437;">e</span>
+      </button>
+    </nb-card-footer>
+  </nb-card>
+</ng-template>
+
+<ng-template #authenticated>
+  <nb-card status="basic">
+    <nb-card-header>
+      You are signing in with <span style="color:#4285F4 ;">G</span> <span style="color: #DB4437;">o</span> <span style="color: #F4B400;">o</span> <span style="color: #4285F4;">g</span> <span style="color: #0F9D58;">l</span> <span style="color: #DB4437;">e</span>
+    </nb-card-header>
+    <nb-card-body *ngIf="authService.user$ | async as user">
+      <nb-user size="giant"
+             name={{user.displayName}}
+             title={{user.email}}
+             picture={{user.photoURL}}
+             shape="rectangle"
+             style="margin-bottom: 5vh;">
+      </nb-user>
+      <button nbButton fullWidth  status="basic" (click)="signOut()">Log out</button>
+    </nb-card-body>
+  </nb-card>
+</ng-template>
