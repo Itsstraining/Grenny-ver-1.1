@@ -2,7 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     app-search {
         flex-grow: 2;
+        margin-left: 3%;
+    }
+
+    app-logo{
+      margin-left: 2%;
     }
 }

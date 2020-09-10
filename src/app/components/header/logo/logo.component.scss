@@ -12,4 +12,20 @@ div {
         padding: 0px;
         margin: 0 auto;
     }
+    h1{
+      font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  div {
+    img {
+      width: 25px;
+      cursor: pointer;
+      outline: none;
+    }
+    h1{
+      font-size: 15px;
+    }
+  }
 }

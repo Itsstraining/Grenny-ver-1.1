@@ -22,7 +22,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     {
       title: "Home",
       icon: "home-outline",
-      link: '/',
+      link: ["home"],
       skipLocationChange: true
     },
     {
@@ -40,7 +40,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     {
       title: "Upload music",
       icon: "cloud-upload-outline",
-      link: ['upload'],
+      link: ["upload"],
       hidden: true
     }
   ];

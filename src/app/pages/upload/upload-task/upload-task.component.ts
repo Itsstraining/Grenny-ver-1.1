@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { finalize, tap } from 'rxjs/operators';
 import { MusicData } from 'src/app/models/music-data.model';
 import { CloudService } from 'src/app/services/cloud.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-upload-task',
   templateUrl: './upload-task.component.html',
@@ -26,7 +26,8 @@ export class UploadTaskComponent implements OnInit {
 
   constructor(
     private storage: AngularFireStorage,
-    private cloudService: CloudService
+    private cloudService: CloudService,
+    public router : Router
   ) { }
 
   ngOnInit() {
@@ -72,8 +73,9 @@ export class UploadTaskComponent implements OnInit {
           } as MusicData).then(() => {
             this.cloudService.name.reset();
             this.cloudService.singer.reset();
-            this.cloudService.artist.reset();
+            this.cloudService.artist.reset(); 
             location.reload();
+
           });
         }),
       );
